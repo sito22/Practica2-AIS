@@ -6,7 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TicTacToeGame {
 
-	enum EventType {
+	public enum EventType {
 		JOIN_GAME, GAME_READY, MARK, SET_TURN, GAME_OVER, RESTART, RECONNECT
 	}
 
@@ -15,9 +15,9 @@ public class TicTacToeGame {
 		volatile String value;
 	}
 
-	static class WinnerResult {
-		boolean win;
-		int[] pos;
+	public static class WinnerResult {
+		public boolean win;
+		public int[] pos;
 	}
 
 	static class CellMarkedValue implements Serializable {
@@ -25,9 +25,9 @@ public class TicTacToeGame {
 		Player player;
 	}
 
-	static class WinnerValue implements Serializable {
-		Player player;
-		int[] pos;
+	public static class WinnerValue implements Serializable {
+		public Player player;
+		public int[] pos;
 	}
 
 	static class Event implements Serializable {
