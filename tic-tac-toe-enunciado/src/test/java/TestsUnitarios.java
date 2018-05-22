@@ -17,7 +17,7 @@ public class TestsUnitarios {
     Player p1;
     Player p2; 
     TicTacToeGame ttt = new TicTacToeGame();
-    WinnerResult w = new WinnerResult();
+    //WinnerResult w = new WinnerResult();
     
     @Before
     public void setUpClass()
@@ -34,8 +34,8 @@ public class TestsUnitarios {
     {
         System.out.println("\n\nComprobacion del test en el que gana el Jugador 1");
         int[] valores = {0, 3, 6};
-        w.win = true;
-        w.pos = valores;
+        /*w.win = true;
+        w.pos = valores;*/
         //Colocamos las fichas de tal manera que el ganador sea el jugador 1
         ttt.mark(0);
         ttt.mark(1);
@@ -45,10 +45,10 @@ public class TestsUnitarios {
         //Finalmente comprobamos si el valor que devuelve la funcion checkDraw() es False, y checkWinner() nos devuelve el valor correcto
         assertEquals("No hay una linea ganadora", ttt.checkDraw(), false);
         System.out.println("El valor obtenido sobre el empate es: " + ttt.checkDraw() + " y el valor que se deberia obtener es: " + false);
-        assertEquals("El ganador es el jugador dos", ttt.checkWinner().win, w.win);
-        System.out.println("El valor obtenido de la clase es: " + ttt.checkWinner().win + " y el valor que se deberia obtener es: " +  w.win);
-        Assert.assertArrayEquals("Las posiciones de las fichas ganadoras", ttt.checkWinner().pos, w.pos);
-        System.out.println("Las posiciones de las fichas ganadoras son: " + Arrays.toString(ttt.checkWinner().pos) + " y las posiciones que se deberian obtener son: " + Arrays.toString(w.pos));
+        assertEquals("El ganador es el jugador dos", ttt.checkWinner().win, true);
+        System.out.println("El valor obtenido de la clase es: " + ttt.checkWinner().win + " y el valor que se deberia obtener es: " +  true);
+        Assert.assertArrayEquals("Las posiciones de las fichas ganadoras", ttt.checkWinner().pos, valores);
+        System.out.println("Las posiciones de las fichas ganadoras son: " + Arrays.toString(ttt.checkWinner().pos) + " y las posiciones que se deberian obtener son: " + Arrays.toString(valores));
     }
     
     @Test
@@ -56,8 +56,8 @@ public class TestsUnitarios {
     {
         System.out.println("\n\nComprobacion del test en el que gana el Jugador 2");
         int[] valores = {6, 4, 2};
-        w.win = true;
-        w.pos = valores;
+        /*w.win = true;
+        w.pos = valores;*/
         //Colocamos las fichas de tal manera que el ganador sea el jugador 2
         ttt.mark(0);
         ttt.mark(1);
@@ -68,12 +68,12 @@ public class TestsUnitarios {
         ttt.mark(8);
         ttt.mark(2);
         //Finalmente comprobamos si el valor que devuelve la funcion checkDraw() es False, y checkWinner() nos devuelve el valor correcto
-        assertEquals("No ay una linea ganadora", ttt.checkDraw(), false);
+        assertEquals("No hay una linea ganadora", ttt.checkDraw(), false);
         System.out.println("El valor obtenido sobre el empate es: " + ttt.checkDraw() + " y el valor que se deberia obtener es: " + false);
-        assertEquals("El ganador es el jugador dos", ttt.checkWinner().win, w.win);
-        System.out.println("El valor obtenido de la clase es: " + ttt.checkWinner().win + " y el valor que se deberia obtener es: " +  w.win);
-        Assert.assertArrayEquals("Las posiciones de las fichas ganadoras", ttt.checkWinner().pos, w.pos);
-        System.out.println("Las posiciones de las fichas ganadoras son: " + Arrays.toString(ttt.checkWinner().pos) + " y las posiciones que se deberian obtener son: " + Arrays.toString(w.pos));
+        assertEquals("El ganador es el jugador dos", ttt.checkWinner().win, true);
+        System.out.println("El valor obtenido de la clase es: " + ttt.checkWinner().win + " y el valor que se deberia obtener es: " +  true);
+        Assert.assertArrayEquals("Las posiciones de las fichas ganadoras", ttt.checkWinner().pos, valores);
+        System.out.println("Las posiciones de las fichas ganadoras son: " + Arrays.toString(ttt.checkWinner().pos) + " y las posiciones que se deberian obtener son: " + Arrays.toString(valores));
     }
     
     @Test
