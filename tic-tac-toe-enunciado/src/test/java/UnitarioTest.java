@@ -11,7 +11,7 @@ import org.junit.Before;
  *
  * @author sito
  */
-public class TestsUnitarios {
+public class UnitarioTest {
     
     //Creamos dos Jugadores
     Player p1;

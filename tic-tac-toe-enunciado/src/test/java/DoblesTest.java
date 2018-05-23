@@ -20,7 +20,7 @@ import static org.mockito.Mockito.verify;
  *
  * @author sito
  */
-public class TestsConDobles {
+public class DoblesTest {
     
     //Creamos el objeto TicTacToeGame
     TicTacToeGame ttt = new TicTacToeGame();

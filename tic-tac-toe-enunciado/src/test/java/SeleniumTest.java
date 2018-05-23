@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author sito
  */
-public class TestsSelenium {
+public class SeleniumTest {
     
     //Declaramos los dos WebDriver que abriran los dos navegadores de Google Chrome
     private WebDriver driver1;
